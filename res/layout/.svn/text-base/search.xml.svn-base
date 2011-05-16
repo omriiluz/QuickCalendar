@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:scrollbars="vertical">
+	<LinearLayout android:layout_width="wrap_content"
+		android:layout_height="wrap_content" android:orientation="vertical"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:scrollbars="vertical">
+
+		<RelativeLayout android:id="@+id/RelativeLayout01"
+			android:layout_width="wrap_content" android:layout_height="wrap_content">
+			<Button android:id="@+id/SearchButton" android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true" android:drawableLeft="@drawable/ic_menu_search"
+				android:paddingBottom="2sp" android:paddingTop="2sp"
+				android:paddingRight="6sp" android:paddingLeft="6sp"/>
+			<EditText android:id="@+id/SearchText"
+				android:layout_width="fill_parent" android:layout_toLeftOf="@+id/SearchButton"
+				android:layout_height="wrap_content" android:layout_alignBaseline="@+id/SearchButton"
+				android:singleLine="true" android:saveEnabled="true" />
+		</RelativeLayout>
+		<LinearLayout android:id="@+id/LinearLayout01"
+			android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/start_date"
+				android:textSize="20sp"/>
+			<DatePicker android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/StartDatePicker"/>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text="@string/end_date"
+				android:textSize="20sp"/>
+			<DatePicker android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:id="@+id/EndDatePicker"/>
+		</LinearLayout>
+		<CheckBox android:layout_width="wrap_content"
+			android:layout_height="wrap_content" android:id="@+id/SearchAllCalendars"
+			android:text="@string/search_all_calendars" android:textSize="20sp" android:saveEnabled="true"/>
+	</LinearLayout>
+</ScrollView>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+	package="net.jimblackler.quickcalendar" android:versionCode="38" android:versionName="0.9.51">
+	<uses-sdk android:minSdkVersion="1"/>
+	
+    <supports-screens android:largeScreens="true"
+             android:normalScreens="true" android:smallScreens="true"
+             android:anyDensity="true" android:resizeable="true"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+             
+	<application android:icon="@drawable/icon" android:label="@string/app_name"
+		android:debuggable="false">
+		<activity android:name=".MainActivity" android:label="@string/app_name"
+			android:theme="@android:style/Theme.Light">
+			<intent-filter>
+				<action android:name="android.intent.action.MAIN" />
+				<category android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+		<activity android:name=".Preferences" />
+		<activity android:name=".Search" />
+		<activity android:name=".About" android:label="@string/about" />
+		<service android:name=".RefreshService" />
+		<receiver android:name=".ServiceAutoStarter">
+			<intent-filter>
+				<action android:name="android.intent.action.BOOT_COMPLETED" />
+			</intent-filter>
+		</receiver>
+
+		<meta-data android:name="com.a0soft.gphone.aTrackDog.webURL"
+			android:value="http://jimblackler.net/blog/?p=67" />
+		<meta-data android:name="com.a0soft.gphone.aTrackDog.dlURL"
+			android:value="http://jimblackler.net/QuickCalendar.apk" />
+
+		<receiver android:name=".QCAppWidgetProvider2" android:label="@string/two_slot_widget">
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/appwidget_provider_2" />
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name=".QCGadgetProvider" android:label="@string/three_slot_widget">
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/appwidget_provider_3" />
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name=".QCAppWidgetProvider2DH" android:label="@string/two_slot_widget_dh">
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/appwidget_provider_2_dh" />
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+		</receiver>
+
+		<receiver android:name=".QCAppWidgetProvider3DH" android:label="@string/three_slot_widget_dh">
+			<meta-data android:name="android.appwidget.provider"
+				android:resource="@xml/appwidget_provider_3_dh" />
+			<intent-filter>
+				<action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+			</intent-filter>
+		</receiver>
+
+	</application>
+	<uses-permission android:name="android.permission.READ_CALENDAR" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+	<uses-permission android:name="android.permission.READ_SETTINGS" />
+
+
+</manifest> 

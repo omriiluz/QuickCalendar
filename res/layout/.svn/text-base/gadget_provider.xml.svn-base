@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/main_layout" android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@drawable/border" android:paddingLeft="6dip"
+	android:paddingRight="6dip">
+
+	<TextView android:id="@+id/title_now" 
+		android:layout_width="wrap_content" android:maxLines="1" android:layout_height="fill_parent" android:textStyle="bold"
+		android:textSize="14dip" android:visibility="gone"/>
+	<TextView android:id="@+id/start_time_now"
+		android:layout_width="wrap_content" android:maxLines="1" android:layout_height="fill_parent" android:textSize="10dip"
+		android:textStyle="bold" android:textColor="#AA000000" android:visibility="gone"/>
+	<TextView android:id="@+id/title_next"
+		android:layout_width="wrap_content" android:maxLines="1" android:textStyle="bold"
+		android:textSize="14dip" android:layout_height="fill_parent" android:visibility="gone"/>
+	<TextView android:id="@+id/start_time_next"
+		android:layout_width="wrap_content" android:maxLines="1"  android:layout_height="fill_parent" android:textSize="10dip"
+		android:textStyle="bold" android:textColor="#AA000000" android:visibility="gone"/>
+	<TextView android:id="@+id/title_next2"
+		android:layout_width="wrap_content" android:maxLines="1" android:textStyle="bold"
+		android:textSize="14dip" android:layout_height="fill_parent" android:visibility="gone"/>
+	<TextView android:id="@+id/start_time_next2"
+		android:layout_width="wrap_content" android:maxLines="1"  android:layout_height="fill_parent" android:textSize="10dip"
+		android:textStyle="bold" android:textColor="#AA000000" android:visibility="gone"/>
+	<TextView android:id="@+id/title_next3"
+		android:layout_width="wrap_content" android:maxLines="1" android:textStyle="bold"
+		android:textSize="14dip" android:layout_height="fill_parent" android:visibility="gone"/>
+	<TextView android:id="@+id/start_time_next3"
+		android:layout_width="wrap_content" android:maxLines="1"  android:layout_height="fill_parent" android:textSize="10dip"
+		android:textStyle="bold" android:textColor="#AA000000" android:visibility="gone"/>
+</LinearLayout>
+

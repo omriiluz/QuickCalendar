@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/jimblackler/!svn/ver/75/trunk/workspace/QuickCalendar/res/layout
+END
+preference_dialog_duration.xml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/jimblackler/!svn/ver/75/trunk/workspace/QuickCalendar/res/layout/preference_dialog_duration.xml
+END
+gadget_provider_stripey.xml
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/jimblackler/!svn/ver/68/trunk/workspace/QuickCalendar/res/layout/gadget_provider_stripey.xml
+END
+main.xml
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/jimblackler/!svn/ver/75/trunk/workspace/QuickCalendar/res/layout/main.xml
+END
+widget_configure.xml
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/jimblackler/!svn/ver/42/trunk/workspace/QuickCalendar/res/layout/widget_configure.xml
+END
+gadget_provider.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/jimblackler/!svn/ver/75/trunk/workspace/QuickCalendar/res/layout/gadget_provider.xml
+END
+number_picker.xml
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/jimblackler/!svn/ver/75/trunk/workspace/QuickCalendar/res/layout/number_picker.xml
+END
+search.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/jimblackler/!svn/ver/1/trunk/workspace/QuickCalendar/res/layout/search.xml
+END
+notification.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/jimblackler/!svn/ver/1/trunk/workspace/QuickCalendar/res/layout/notification.xml
+END
+header.xml
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/jimblackler/!svn/ver/68/trunk/workspace/QuickCalendar/res/layout/header.xml
+END
+notification_now.xml
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/jimblackler/!svn/ver/1/trunk/workspace/QuickCalendar/res/layout/notification_now.xml
+END
+about.xml
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/jimblackler/!svn/ver/26/trunk/workspace/QuickCalendar/res/layout/about.xml
+END
+list_entry.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/jimblackler/!svn/ver/1/trunk/workspace/QuickCalendar/res/layout/list_entry.xml
+END
+list_entry_categorized.xml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/jimblackler/!svn/ver/1/trunk/workspace/QuickCalendar/res/layout/list_entry_categorized.xml
+END

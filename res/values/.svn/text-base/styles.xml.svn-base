@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<style name="quick_calendar_style">
+		<item name="android:textColor">#ff000000</item>
+	</style>
+
+	<style name="header">
+		<item name="android:paddingBottom">2sp</item>
+		<item name="android:paddingTop">2sp</item>
+		<item name="android:background">#33000000</item>
+    
+       	</style>
+</resources>

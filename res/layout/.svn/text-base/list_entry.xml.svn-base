@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:id="@+id/LinearLayout01" android:orientation="vertical"
+              android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="8sp">
+    <TextView android:text="The title of the upcoming event." android:id="@+id/Title"
+              android:layout_width="fill_parent" android:layout_height="wrap_content" android:textStyle="bold" 
+              android:textSize="20sp" />
+    <TextView android:text="Start time." android:id="@+id/StartTime"
+              android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4sp"/>
+</LinearLayout>

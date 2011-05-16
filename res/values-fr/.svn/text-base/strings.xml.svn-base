@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<string name="time_language">fr</string>
+
+	<string name="working">Traitement</string> <!-- Title for the dialog that indicates the program is calculating -->
+	<string name="searching">Recherche</string> <!-- Text content of the dialog that indicates the program is searching for events  -->
+	<string name="results_for">Résultats pour</string> <!-- Used in search results phrase, e.g. "Results for \'meeting\'"  -->
+	<string name="about1">Quick Calendar affiche vos rendez-vous en cours ou à venir dans la barre de notifications. Les mêmes informations peuvent également être affichées par un widget sur la page d\'accueil.</string> <!--  currently used in the Market description -->
+	<string name="about2">En cliquant sur les notifications vous obtenez une page de visualisation des évènements à venir durant la semaine.</string> <!--  currently used in the Market description -->
+		
+	<string name="app_name">Quick Calendar</string>
+	<string name="number_events">Nombre maximum d\'évènements à afficher dans la barre de notifications</string>
+	<string name="number_events_short">Evènements à afficher (notifications)</string>
+	<string name="events_to_list_short">Evènements à afficher (écran principal) </string>
+	<string name="events_to_list">Période de temps à afficher dans l\'écran principal</string>
+	<string name="events_to_alert_short">Evènements à afficher (widget)</string>
+	<string name="events_to_alert">Période de temps à afficher dans le widget</string>
+	<string name="preferences">Préférences</string>
+	<string name="refresh">Mettre à jour</string>
+	<string name="about">A propos</string>
+	<string name="search">Rechercher</string>
+	<string name="about_text">Ecrit par Jim Blackler
+		(jimblackler@gmail.com).</string>
+	<string name="art_credit">Icone par Darrel Austin.</string>
+	<string name="license_text">Free software, licensed under the Apache
+		License, Version 2.0 .</string>
+	<string name="calendars_to_include">Calendriers à inclure</string>
+	<string name="start_service">Lancer au démarrage</string>
+	<string name="colored_calendars">Utiliser les couleurs</string>
+	<string name="colored_calendars_detail">Utiliser les couleurs des calendriers parents</string>
+	<string name="all_day_in_status_bar">Evènements \'journée entière\'</string>
+	<string name="all_day_in_status_bar_detail">Afficher les évènements \'journée entière\' dans le widget</string>
+	<string name="enhanced_dates">Format de dates amélioré</string>
+	<string name="enhanced_dates_detail">Afficher les dates et heures dans un format amélioré</string>
+	<string name="headers">Grouper par jour</string>
+	<string name="headers_detail">Grouper les évènements par jour dans l\'écran principal</string>
+	<string name="hide_icons">Masquer les icones de notification</string>
+	<string name="basic_dates">Format de dates normal</string>
+	<string name="start_date">Début</string>
+	<string name="end_date">Fin</string>
+	<string name="search_all_calendars">Chercher dans tous les calendriers</string>
+	<string name="units">Unités</string>
+	<string name="edit">Modifier l\'évènement</string>
+	<string name="view">Voir l\'évènement</string>
+	<string name="new_event">Nouvel évènement</string>
+<!-- <string name="now">En ce moment</string>..  now in English by request -->
+	<string name="now">Now</string>
+	<string name="visit_website">Site web</string>
+	<string name="now_plus_colon">Maintenant : </string>
+	<string name="no_events_advice_1">Pas d\'évènement trouvé</string>
+	<string name="no_events_advice_2">Quick Calendar utilise les évènements de Google Calendar qui sont déjà synchronisés sur votre appareil Android.</string>
+	<string name="no_events_advice_3">- Verifiez sur votre calendrier Google qu\'il existe des évènements durant les deux prochaines semaines.</string>
+	<string name="no_events_advice_4">- Appuyez sur Menu, sélectionnez Préférences, puis Calendriers à inclure. Assurez-vous que les bons calendriers sont activés.</string>
+
+<string name="no_search_results">Aucun évènement correspondant trouvé.</string>
+
+
+
+
+</resources>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/main_layout" android:orientation="vertical"
+	android:layout_width="fill_parent" android:layout_height="wrap_content"
+	android:background="@drawable/border" >
+
+	<TextView android:id="@+id/start_time_now"
+	android:background="#285078"
+				android:paddingLeft="8.0dip"
+		android:layout_width="fill_parent" android:maxLines="1" android:layout_height="fill_parent" android:textSize="11sp"
+		android:textStyle="bold" android:textColor="#ffffff" android:visibility="gone"/>
+	<TextView android:id="@+id/title_now" 
+				android:paddingLeft="8.0dip"
+		android:layout_width="wrap_content" android:maxLines="1" android:layout_height="fill_parent" android:textStyle="bold"
+		android:textSize="16sp" android:visibility="gone"/>
+	<TextView android:id="@+id/start_time_next"
+				android:paddingLeft="8.0dip"
+	android:background="#507088"
+		android:layout_width="fill_parent" android:maxLines="1"  android:layout_height="fill_parent" android:textSize="11sp"
+		android:textStyle="bold" android:textColor="#ffffff" android:visibility="gone"/>
+	<TextView android:id="@+id/title_next"
+				android:paddingLeft="8.0dip"
+		android:layout_width="wrap_content" android:maxLines="1" android:textStyle="bold"
+		android:textSize="16sp" android:layout_height="fill_parent" android:visibility="gone"/>
+	<TextView android:id="@+id/start_time_next2"
+				android:paddingLeft="8.0dip"
+	android:background="#285078"
+	android:textColor="#ffffff"
+		android:layout_width="fill_parent" android:maxLines="1"  android:layout_height="fill_parent" android:textSize="11sp"
+		android:textStyle="bold" android:visibility="gone"/>
+	<TextView android:id="@+id/title_next2"
+				android:paddingLeft="8.0dip"
+		android:layout_width="wrap_content" android:maxLines="1" android:textStyle="bold"
+		android:textSize="16sp" android:layout_height="fill_parent" android:visibility="gone"/>
+	<TextView android:id="@+id/start_time_next3"
+				android:paddingLeft="8.0dip"
+	android:background="#507088"
+	android:textColor="#ffffff"
+		android:layout_width="fill_parent" android:maxLines="1"  android:layout_height="fill_parent" android:textSize="11sp"
+		android:textStyle="bold" android:visibility="gone"/>
+	<TextView android:id="@+id/title_next3"
+				android:paddingLeft="8.0dip"
+		android:layout_width="wrap_content" android:maxLines="1" android:textStyle="bold"
+		android:textSize="16sp" android:layout_height="fill_parent" android:visibility="gone"/>
+</LinearLayout>
+

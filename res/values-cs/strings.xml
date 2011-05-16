@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--
+		Czech translation: Jiří Prachař (dodo) 
+	-->
+
+	<string name="time_language">cs</string>
+	
+	<string name="working">Pracuji...</string> <!-- Title for the dialog that indicates the program is calculating -->
+	<string name="searching">Vyhledávám...</string>	<!--Text content of the dialog that indicates the program is searching for events-->
+
+	<string name="results_for">Výsledky pro</string> <!-- Used in search results phrase, e.g. "Results for 'meeting'"  -->
+	<string name="about1">Quick Calendar zobrazuje Vaše nadcházející, nebo probíhající události ve status baru. 
+	    Nabízí také widget na plochu zobrazující tyto informace.</string> <!--  currently used in the Market description -->
+	<string name="about2">Kliknutím na oznámení se dosanete na rychlý výpis událostí příštího týdne.
+		</string> <!--  currently used in the Market description -->
+	<string name="app_name">Quick Calendar</string>
+	<string name="number_events">Počet zobrazených událostí v notify baru</string>
+	<string name="number_events_short">Událostí k zobrazení</string>
+	<string name="events_to_list_short">Předstih pro zobrazení </string>
+	<string name="events_to_list">Maximální předstih pro zobrazení událostí na hlavní obrazovce</string>
+	<string name="events_to_alert_short">Předstih pro upozornění</string>
+	<string name="events_to_alert">Maximální předstih pro upozornění na událost ve status baru</string>
+	<string name="preferences">Nastavení</string>
+	<string name="refresh">Obnovit</string>
+	<string name="about">O aplikaci</string>
+	<string name="search">Hledat</string>
+	<string name="about_text">Napsal Jim Blackler
+		(jimblackler@gmail.com).</string>
+	<string name="art_credit">Ikony Darrel Austin.</string>
+	<string name="license_text">Free software, licensed under the Apache
+		License, Version 2.0 .</string>
+	<string name="calendars_to_include">Zahrnuté kalendáře</string>
+	<string name="start_service">Spustit službu po startu</string>
+	<string name="colored_calendars">Události barevně</string>
+	<string name="colored_calendars_detail">Zobrazí události barevně podle barvy kalendáře</string>
+	<string name="all_day_in_status_bar">Ukaž celodenní události</string>
+	<string name="all_day_in_status_bar_detail">Ve status baru se zobrazí celodenní události</string>
+	<string name="enhanced_dates">Rozšířený formát času</string>
+	<string name="enhanced_dates_detail">Zobrazí čas a datum v přátelštější podobě</string>
+	
+	<string name="large_widget_font">Velký font ve widgetu</string>
+	<string name="large_widget_font_detail">Pro widget na ploše použije větší písmo</string>
+	
+	<string name="headers">Seskupit události po dni</string>
+	<string name="headers_detail">Ve hlavním pohledu zobrazí události seskupené po dnech</string>
+	<string name="hide_icons">Skrýt ikony oznámení</string>
+	<string name="basic_dates">Základní formát data</string>
+	<string name="start_date">Počáteční datum</string>
+	<string name="end_date">Koncové datum</string>
+	<string name="search_all_calendars">Prohledej všechny kalendáře</string>
+	<string name="units">Jednotky</string>
+	<string name="edit">Upravit událost</string>
+	<string name="view">Zobrazit událost</string>
+	<string name="new_event">Nová událost</string>
+	<string name="now">Nyní</string>
+	<string name="visit_website">Navštívit web</string>
+	<string name="now_plus_colon">Nyní: </string>
+	<string name="no_events_advice_1">Nenalezena žádná událost</string>
+	<string name="no_events_advice_2">Quick Calendar používá data která jsou již ve Vašem Androidu a synchronizují se s Google Calendar.
+		</string>
+	<string name="no_events_advice_3">- Podívejte se do standardní aplikace Android Calendar
+		jesli máte na příští dva týdny naplánovánu nějakou událost.</string>
+	<string name="no_events_advice_4">- Stiskněte Menu, vyberte Nastavení, potom Zahrnuté kalendáře. 
+		Ujistěte se zda máte vybrány správné kalendáře.</string>
+
+	<string name="no_search_results">Nenalezena žádná odpovídající událost.</string>
+
+		
+</resources>

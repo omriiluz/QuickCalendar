@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:orientation="vertical" android:layout_width="fill_parent"
+	android:layout_height="wrap_content" 
+	style="@style/header">
+	<TextView android:text="Day name" android:id="@+id/DayName"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:textStyle="bold" android:textSize="20sp" android:textColor="#000000"
+		android:gravity="center_horizontal" />
+
+</LinearLayout>

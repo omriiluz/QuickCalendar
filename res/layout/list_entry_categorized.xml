@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+			  android:orientation="horizontal"
+              android:layout_width="fill_parent" android:layout_height="wrap_content" android:padding="8sp">
+    <TextView android:layout_width="wrap_content" android:id="@+id/StartTime12"
+		android:layout_height="wrap_content" android:text="7:30"
+		android:textSize="20sp" android:paddingRight="4sp"
+		android:width="90sp" android:visibility="gone"
+		/>
+   
+   <TextView android:layout_width="wrap_content" android:id="@+id/StartTime"
+		android:layout_height="wrap_content" android:text="7:30"
+		android:textSize="20sp" android:paddingRight="8sp"
+		android:width="62sp"
+		android:visibility="gone"
+		/>
+		
+    <TextView android:text="The title of the upcoming event." android:id="@+id/Title"
+              android:layout_width="fill_parent" android:layout_height="wrap_content"
+              android:textSize="20sp"  android:textStyle="bold" />
+   
+</LinearLayout>

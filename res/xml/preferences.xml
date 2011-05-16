@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceScreen android:title="@string/calendars_to_include"
+		android:key="calendars_select"/>
+	<ListPreference android:entries="@array/entries_list_preference"
+		android:entryValues="@array/entries_list_preference" android:summary="@string/number_events"
+		android:dialogTitle="@string/number_events" android:title="@string/number_events_short"
+		android:defaultValue="@string/number_events_default" android:key="@string/number_events_key" />
+	<net.jimblackler.androidcommon.DurationPreference android:summary="@string/events_to_alert"
+		android:title="@string/events_to_alert_short" android:dialogTitle="@string/events_to_alert_short"
+		android:key="@string/events_to_alert_key" android:defaultValue="@string/events_to_alert_default"/>
+	<net.jimblackler.androidcommon.DurationPreference android:summary="@string/events_to_list"
+		android:dialogTitle="@string/events_to_list_short" android:title="@string/events_to_list_short"
+		android:key="@string/events_to_list_key" android:defaultValue="@string/events_to_list_default"
+		/>
+    <net.jimblackler.androidcommon.DurationPreference android:summary="@string/refresh_frequency"
+        android:dialogTitle="@string/refresh_frequency_short" android:title="@string/refresh_frequency_short"
+        android:key="@string/refresh_frequency_key" android:defaultValue="@string/refresh_frequency_default"
+        />
+	<CheckBoxPreference android:title="@string/start_service"
+		android:key="@string/start_service_key" android:defaultValue="@string/start_service_default"/>
+	<CheckBoxPreference android:title="@string/hide_icons"
+		android:key="@string/hide_icons_key" android:defaultValue="@string/hide_icons_default"/>
+	<CheckBoxPreference android:title="@string/colored_calendars" android:summary="@string/colored_calendars_detail"
+		android:key="@string/colored_calendars_key" android:defaultValue="@string/colored_calendars_default"/>	
+	<CheckBoxPreference android:title="@string/headers" android:summary="@string/headers_detail"
+		android:key="@string/headers_key" android:defaultValue="@string/headers_default"/>		
+	<CheckBoxPreference android:title="@string/all_day_in_status_bar" android:summary="@string/all_day_in_status_bar_detail"
+		android:key="@string/all_day_in_status_bar_key" android:defaultValue="@string/all_day_in_status_bar_default"/>	
+    <CheckBoxPreference android:title="@string/enhanced_dates" android:summary="@string/enhanced_dates_detail"
+		android:key="@string/enhanced_dates_key" android:defaultValue="@string/enhanced_dates_default"/>	
+	<CheckBoxPreference android:title="@string/large_widget_font" android:summary="@string/large_widget_font_detail"
+		android:key="@string/large_widget_font_key" android:defaultValue="@string/large_widget_font_default"/>		
+		
+</PreferenceScreen>
+        

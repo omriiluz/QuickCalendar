@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--
+		Please translate phrases below this line, just the text between the
+		<string> tags, not the 'name' attributes or the comments afterwards.
+		Where present, these are guides to translators.
+	-->
+
+	<string name="time_language">es</string>
+
+
+	<string name="number_events">Most events to show on the notify bar</string>
+
+	<string name="working">Trabajando</string> <!-- Title for the dialog that indicates the program is calculating -->
+	<string name="searching">Buscando</string>
+	<!--Text content of the dialog that indicates the program is searching for events-->
+
+	<string name="results_for">Resultados para</string> <!-- Used in search results phrase, e.g. "Results for 'meeting'"  -->
+	<string name="about1">Quick Calendar muestra en la barra de estado 
+		sus eventos próximos o actuales. Además permite visualizar la misma
+		 información en un widget en la pantalla de inicio.</string> <!--  currently used in the Market description -->
+	<string name="about2">Al seleccionar las notificaciones, le llevará
+		a una lista rápida con los eventos de la semana siguiente.</string> <!--  currently used in the Market description -->
+	<string name="app_name">Quick Calendar</string>
+
+	<string name="number_events_short">Eventos a mostrar</string>
+	<string name="events_to_list_short">Tiempo de antelación para listar eventos</string>
+	<string name="events_to_list">El tiempo máximo de antelación para listar eventos
+		en la pantalla principal</string>
+	<string name="events_to_alert_short">Tiempo de antelación para alertar de eventos</string>
+	<string name="events_to_alert">Tiempo de antelación máximo para alertar de eventos
+		en la barra de estado</string>
+	<string name="preferences">Preferencias</string>
+	<string name="refresh">Actualizar</string>
+	<string name="about">Sobre</string>
+	<string name="search">Buscar</string>
+	<string name="about_text">Escrito por Jim Blackler
+		(jimblackler@gmail.com).</string>
+	<string name="art_credit">Icono por Darrel Austin.</string>
+	<string name="license_text">Software libre, licenciado baja la licencia Apache
+		License, Version 2.0 .</string>
+	<string name="calendars_to_include">Calendarios a incluir</string>
+	<string name="start_service">Iniciar el servicio en el arranque</string>
+	<string name="colored_calendars">Colorear eventos</string>
+	<string name="colored_calendars_detail">Aplicar a los eventos en la vista principal el mismo color que el 
+		calendario padre</string>
+	<string name="all_day_in_status_bar">Mostrar eventos de día completo</string>
+	<string name="all_day_in_status_bar_detail">Los eventos de día completo aparecen en la barra de estado</string>
+	<string name="enhanced_dates">Formato de fecha mejorado</string>
+	<string name="enhanced_dates_detail">Horas y fechas en formato amigable
+	</string>
+	<string name="headers">Agrupar eventos por día</string>
+	<string name="headers_detail">Agrupar los enventos en la vista principal por día</string>
+	<string name="hide_icons">Ocultar iconos de notificación</string>
+	<string name="basic_dates">Formato de fecha básico</string>
+	<string name="start_date">Fecha incio</string>
+	<string name="end_date">Fecha fin</string>
+	<string name="search_all_calendars">Buscar en todos los calendarios</string>
+	<string name="units">Unidades</string>
+	<string name="edit">Editar evento</string>
+	<string name="view">Ver evento</string>
+	<string name="new_event">Nuevo ecento</string>
+	<string name="now">Ahora</string>
+	<string name="visit_website">Visite el website</string>
+	<string name="now_plus_colon">Ahora: </string>
+	<string name="no_events_advice_1">Sin eventos encontrados</string>
+	<string name="no_events_advice_2">Quick Calendar usa los eventos de Google Calendar
+		ya sincronizados en su dispositivo Android.</string>
+	<string name="no_events_advice_3">- Vaya a la aplicación de Calendario que viene por defecto con su Android
+		y compruebe si tiene algun evento en las próximas dos semanas.</string>
+	<string name="no_events_advice_4">- Presiones Menu, elija Preferencias, y despues indique los Calendarios
+		a incluir. Verifique que tiene los calendarios correctos habilitados.</string>
+
+	<string name="no_search_results">No se han encontrado eventos coincidentes.</string>
+
+
+
+
+</resources>

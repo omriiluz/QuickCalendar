@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<!--
+		Please translate phrases below this line, just the text between the
+		<string> tags, not the 'name' attributes or the comments afterwards.
+		Where present, these are guides to translators.
+	-->
+
+    <string name="refresh_frequency_short">Aktualisierungsintervall</string> <!-- Shown on the Preferences screen -->
+    <string name="refresh_frequency">Zeitspanne wie oft die Benachrichtigungsleiste und Widgets aktualisiert werden.</string> <!-- Shown on the Preferences screen -->
+
+
+<string name="two_slot_widget">QuickCalendar 2x1</string> <!-- Used on the Widget Select screen -->
+<string name="three_slot_widget">QuickCalendar 3x1</string><!-- Used on the Widget Select screen -->
+<string name="two_slot_widget_dh">QuickCalendar 2x2</string> <!-- Used on the Widget Select screen -->
+<string name="three_slot_widget_dh">QuickCalendar 3x2</string><!-- Used on the Widget Select screen -->
+
+
+	<string name="working">Bitte warten...</string> <!-- Title for the dialog that indicates the program is calculating -->
+	<string name="searching">Suche läuft...</string>
+	<!--Text content of the dialog that indicates the program is searching for events-->
+
+	<string name="results_for">Ergebnisse für</string> <!-- Used in search results phrase, e.g. "Results for 'meeting'"  -->
+	<string name="about1">Quick Calendar zeigt derzeitige oder zukünftige Termine in der 
+	Benachrichtigungsleiste. Kann diese Informationen auch mit einem Widget darstellen.
+		</string> <!--  currently used in the Market description -->
+	<string name="about2">Wenn man auf die Benachrichtigungen klickt, werden die 
+	Termine der nächsten Wochen übersichtlich angezeigt.</string> <!--  currently used in the Market description -->
+	<string name="app_name">Quick Calendar</string>
+	<string name="number_events">in der Benachrichtigungsleiste</string>
+	<string name="number_events_short">Anzahl der Termine</string>
+	<string name="events_to_list_short">Zeitraum (Hauptansicht)</string>
+	<string name="events_to_list">Wie weit sollen im Vornherein Termine in der Hauptansicht angezeigt werden</string>
+        
+	<string name="events_to_alert_short">Zeitraum (Benachrichtigungsleiste)</string>
+	<string name="events_to_alert">Wie weit soll im Vornherein auf Termine aufmerksam gemacht werden</string>
+	<string name="preferences">Einstellungen</string>
+	<string name="refresh">Aktualisieren</string>
+	<string name="about">Über</string>
+	<string name="search">Suche</string>
+	<string name="about_text">Entwickelt von Jim Blackler
+		(jimblackler@gmail.com).</string>
+	<string name="art_credit">Icon von Darrel Austin.</string>
+	<string name="license_text">Free software, licensed under the Apache
+		License, Version 2.0 .</string>
+	<string name="calendars_to_include">Kalender die berücksichtigt werden sollen</string>
+	<string name="start_service">Service beim Systemstart aktivieren</string>
+	<string name="colored_calendars">Farbige Ereignisse</string>
+	<string name="colored_calendars_detail">Terminen die dem Kalender zugewiesene Farbe geben</string>
+	<string name="all_day_in_status_bar">Ganztägige Ereignisse anzeigen</string>
+	<string name="all_day_in_status_bar_detail">Zeige ganztägige Ereignisse in der Benachrichtigungsleiste</string>
+	<string name="enhanced_dates">Erweitertes Datumsformat</string>
+	<string name="enhanced_dates_detail">Benutzerfreundliche Zeit- und Datumsanzeige
+	</string>
+	
+	<string name="large_widget_font">Größere Schrift (Widget)</string>
+	<string name="large_widget_font_detail">Größere Schrift im Widget verwenden</string>
+	
+	<string name="headers">Ereignisse nach Tag gruppieren</string>
+	<string name="headers_detail">Ereignisse in der Hauptansicht nach Tag gruppieren</string>
+	<string name="hide_icons">Symbol verstecken</string>
+	<string name="basic_dates">Standard Datumsformat</string>
+	<string name="start_date">Startdatum</string>
+	<string name="end_date">Enddatum</string>
+	<string name="search_all_calendars">alle Kalender durchsuchen</string>
+	<string name="units">Einheiten</string>
+	<string name="edit">Termin bearbeiten</string>
+	<string name="view">Termin anzeigen</string>
+	<string name="new_event">Neuer Termin</string>
+	<string name="now">Jetzt</string>
+	<string name="visit_website">Webseite besuchen</string>
+	<string name="now_plus_colon">Jetzt: </string>
+ <string name="no_events_advice_1">Keine Ereignisse gefunden</string> <!-- Messages to tell the user why there are no events seen -->
+ <string name="no_events_advice_2">Quick Calendar benutzt die bereits auf dem Gerät befindlichen Google Calendar Daten</string>
+ <string name="no_events_advice_3">Sehen Sie in der Google Kalender Applikation nach ob für die nächsten 2 Wochen Einträge vorhanden sind</string>
+ <string name="no_events_advice_4">Drücken Sie MENU, wählen sie Einstellungen, "Kalender die berücksichtigt werden sollen". Stellen Sie sicher, dass die richtigen Kalender gewählt sind.</string>
+ <string name="no_search_results">Keine passenden Ereignisse gefinden</string> <!-- following event search -->
+
+	<!-- the strings below this line do not require translation -->
+
+	<string name="time_language">de</string>
+	<string name="number_events_key">net.jimblackler.QuickCalendar.showEvents
+	</string>
+	<string name="number_events_default">2</string>
+	<string name="events_to_list_key">
+		net.jimblackler.QuickCalendar.eventsToListDuration6
+	</string>
+	<string name="events_to_list_default">1814400000</string>
+    <string name="refresh_frequency_key">
+        net.jimblackler.QuickCalendar.refreshFrequency
+    </string>
+    <string name="refresh_frequency_default">300000</string>
+	<string name="events_to_alert_key">
+		net.jimblackler.QuickCalendar.eventsToAlertDuration7
+	</string>
+	<string name="events_to_alert_default">604800000</string>
+	<string name="start_service_key">net.jimblackler.QuickCalendar.startService
+	</string>
+	<string name="start_service_default">1
+	</string>
+	<string name="hide_icons_key">net.jimblackler.QuickCalendar.hideIcons
+	</string>
+	<string name="hide_icons_default">1
+	</string>
+
+	<string name="colored_calendars_key">net.jimblackler.QuickCalendar.coloredCalendars
+	</string>
+	<string name="colored_calendars_default">1</string>
+
+	<string name="all_day_in_status_bar_key">net.jimblackler.QuickCalendar.allDayInStatusBar
+	</string>
+	<string name="all_day_in_status_bar_default">1</string>
+	<string name="enhanced_dates_key">net.jimblackler.QuickCalendar.enhancedDate
+	</string>
+	<string name="enhanced_dates_default">1</string>
+	<string name="headers_key">net.jimblackler.QuickCalendar.headers
+	</string>
+	<string name="headers_default">1
+	</string>
+	
+	<string name="large_widget_font_key">net.jimblackler.QuickCalendar.largeWidgetFont
+	</string>
+	<string name="large_widget_font_default">0</string>
+
+
+</resources>
