@@ -35,156 +35,179 @@ import java.util.List;
 
 public class Common {
 
-  public static class LookupException extends Exception {
+	public static class LookupException extends Exception {
 
-    private static final long serialVersionUID = 1L;
+		private static final long serialVersionUID = 1L;
 
-    public LookupException(String detailMessage) {
-      super(detailMessage);
-    }
-  }
+		public LookupException(String detailMessage) {
+			super(detailMessage);
+		}
+	}
 
-  static List<ClientEvent> calendarQuery(final SharedPreferences preferences,
-      final ContentResolver contentResolver, final String searchString, final long startUtc,
-      final long endUtc, boolean searchAll, boolean includeAllDayEvents) throws LookupException {
+	static List<ClientEvent> calendarQuery(final SharedPreferences preferences,
+			final ContentResolver contentResolver, final String searchString,
+			final long startUtc, final long endUtc, boolean searchAll,
+			boolean includeAllDayEvents) throws LookupException {
 
-    // TODO: generalize this content with that in Preferences
-    String[] calendarSetUrls = { "content://calendar", "content://com.android.calendar", "content://calendarEx" };
-    int[] preferenceIds = {0, 0, 1};
-    
-    List<ClientEvent> events = new ArrayList<ClientEvent>();
+		// TODO: generalize this content with that in Preferences
+		String[] calendarSetUrls = { "content://calendar",
+				"content://com.android.calendar", "content://calendarEx" };
+		int[] preferenceIds = { 0, 0, 1 };
 
-    boolean anyService = false;
-    
-    for (int sourceIdx = 0; sourceIdx != calendarSetUrls.length; sourceIdx++) {
+		List<ClientEvent> events = new ArrayList<ClientEvent>();
 
-      String calendarSetUrl = calendarSetUrls[sourceIdx];
-      StringBuilder where = new StringBuilder();
+		boolean anyService = false;
 
-      if (!searchAll) {
-        // Get selected calendars query
-        final Cursor cursor = contentResolver.query(Uri.parse(calendarSetUrl + "/calendars"),
-            new String[] { "_id", "selected" }, null, null, "displayName");
+		for (int sourceIdx = 0; sourceIdx != calendarSetUrls.length; sourceIdx++) {
 
-        if (cursor == null) {
-          continue;
-        }
-        anyService = true;
-        
-        final String initialSeperator = "(";
-        String seperator = initialSeperator;
+			String calendarSetUrl = calendarSetUrls[sourceIdx];
+			StringBuilder where = new StringBuilder();
 
-        while (cursor.moveToNext()) {
+			if (!searchAll) {
+				// Get selected calendars query
+				final Cursor cursor = contentResolver.query(
+						Uri.parse(calendarSetUrl + "/calendars"), new String[] {
+								"_id", "selected" }, null, null, "displayName");
 
-          final String rawKey = cursor.getString(0);
-          final String key = getCalendarKey(preferenceIds[sourceIdx], rawKey);
-          if (preferences.getBoolean(key, !cursor.getString(1).equals("0"))) {
-            where.append(seperator);
-            where.append("Calendars._id=").append(rawKey);
-            seperator = " OR ";
-          }
-        }
-        if (seperator == initialSeperator) {
-          continue; // Do nothing .. no calendars selected
-        } else {
-          where.append(") AND ");
-        }
-      }
+				if (cursor == null) {
+					continue;
+				}
+				anyService = true;
 
-      final long startLocal = TimeUtils.utcToLocal(startUtc);
-      final long endLocal = TimeUtils.utcToLocal(endUtc);
+				final String initialSeperator = "(";
+				String seperator = initialSeperator;
 
-      where.append("(");
-      if (includeAllDayEvents) {
-        where.append("(allDay == 1 AND ").append(startLocal).append(" < end AND ").append(endLocal)
-            .append(" >= begin) OR ");
-      }
-      where.append("(allDay == 0 AND ").append(startUtc).append(" < end AND ").append(endUtc)
-          .append(" >= begin)");
-      where.append(")");
+				while (cursor.moveToNext()) {
 
-      if (searchString != null) {
-        where.append("AND (title LIKE ");
-        DatabaseUtils.appendEscapedSQLString(where, "%" + searchString + "%");
-        
-        where.append(" OR description LIKE ");
-        DatabaseUtils.appendEscapedSQLString(where, "%" + searchString + "%");
-        
-        where.append(" OR eventLocation LIKE ");
-        DatabaseUtils.appendEscapedSQLString(where, "%" + searchString + "%");
+					final String rawKey = cursor.getString(0);
+					final String key = getCalendarKey(preferenceIds[sourceIdx],
+							rawKey);
+					if (preferences.getBoolean(key, !cursor.getString(1)
+							.equals("0"))) {
+						where.append(seperator);
+						where.append("Calendars._id=").append(rawKey);
+						seperator = " OR ";
+					}
+				}
+				if (seperator == initialSeperator) {
+					continue; // Do nothing .. no calendars selected
+				} else {
+					where.append(") AND ");
+				}
+			}
 
-        where.append(" ) ");
-      }
+			final long startLocal = TimeUtils.utcToLocal(startUtc);
+			final long endLocal = TimeUtils.utcToLocal(endUtc);
 
-      Uri.Builder builder = Uri.parse(calendarSetUrl + "/instances/when").buildUpon();
-      ContentUris.appendId(builder, Math.min(startUtc, startLocal));
-      ContentUris.appendId(builder, Math.max(endUtc, endLocal));
-      Uri build = builder.build();
+			where.append("(");
+			if (includeAllDayEvents) {
+				where.append("(allDay == 1 AND ").append(startLocal)
+						.append(" < end AND ").append(endLocal)
+						.append(" >= begin) OR ");
+			}
+			where.append("(allDay == 0 AND ").append(startUtc)
+					.append(" < end AND ").append(endUtc).append(" >= begin)");
+			where.append(")");
 
-      Cursor cursor = contentResolver.query(build, new String[] { "title", "begin", "end",
-          "allDay", "event_id", "color", "_id", "startDay", "startMinute", "description"}, where.toString(),
-          null, null);
+			if (searchString != null) {
+				where.append("AND (title LIKE ");
+				DatabaseUtils.appendEscapedSQLString(where, "%" + searchString
+						+ "%");
 
-      if (cursor != null) {
-        anyService = true;
-        while (cursor.moveToNext()) {
-          events.add(new ClientEvent(calendarSetUrl, cursor.getString(0), cursor.getString(9), cursor.getLong(1),
-              cursor.getLong(2), cursor.getInt(3), cursor.getLong(4), cursor.getInt(5),
-              cursor.getString(6), cursor.getLong(7), cursor.getInt(8)));
-          String s=cursor.getString(9);
-        }
-      }
-    }
-    
-    if (!anyService) { 
-      throw new LookupException("Calendar service could not be found");
-    }
-    
-    Collections.sort(events, new Comparator<ClientEvent>() {
+				where.append(" OR description LIKE ");
+				DatabaseUtils.appendEscapedSQLString(where, "%" + searchString
+						+ "%");
 
-      public int compare(ClientEvent object1, ClientEvent object2) {
-        // "startDay ASC, startMinute ASC"
-        int compare = new Long(object1.getStartDay()).compareTo(object2.getStartDay());
-        if (compare == 0) {
-          compare = new Integer(object1.getStartMinute()).compareTo(object2.getStartMinute());
-        }
-        return compare;
-      }
-    });
-    return events;
+				where.append(" OR eventLocation LIKE ");
+				DatabaseUtils.appendEscapedSQLString(where, "%" + searchString
+						+ "%");
 
-  }
+				where.append(" ) ");
+			}
 
-  static String getNiceDuration(TimeFormatter timeFormatter, final long nowLocal, long beginUtc,
-      final boolean allDayEvent, final long endUtc, boolean in) {
+			Uri.Builder builder = Uri.parse(calendarSetUrl + "/instances/when")
+					.buildUpon();
+			ContentUris.appendId(builder, Math.min(startUtc, startLocal));
+			ContentUris.appendId(builder, Math.max(endUtc, endLocal));
+			Uri build = builder.build();
 
-    if (allDayEvent) {
-      final long beginLocal = beginUtc; // Utc == local conceptually for all day events
-      final long endLocal = endUtc;
-      return timeFormatter.dailyRelativeStart(beginLocal, endLocal, nowLocal);
-    } else {
-      final long beginLocal = TimeUtils.utcToLocal(beginUtc);
-      final long endLocal = TimeUtils.utcToLocal(endUtc);
-      return timeFormatter.relativeStart(beginLocal, endLocal, nowLocal, in);
-    }
-  }
+			Cursor cursor = contentResolver.query(build,
+					new String[] { "title", "begin", "end", "allDay",
+							"event_id", "color", "_id", "startDay",
+							"startMinute", "description", "eventLocation" },
+					where.toString(), null, null);
 
-  public static PendingIntent getPendingIntent(Context context, String idxString, int requestCode) {
-    final Intent intent = new Intent(context, MainActivity.class);
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // needed?
-    intent.putExtra("instanceId", idxString);
-    return PendingIntent.getActivity(context, requestCode, intent,
-        PendingIntent.FLAG_CANCEL_CURRENT
-    /* PendingIntent.FLAG_UPDATE_CURRENT */);
+			if (cursor != null) {
+				anyService = true;
+				while (cursor.moveToNext()) {
+					events.add(new ClientEvent(calendarSetUrl, cursor
+							.getString(0), cursor.getString(9), cursor
+							.getString(10), cursor.getLong(1), cursor
+							.getLong(2), cursor.getInt(3), cursor.getLong(4),
+							cursor.getInt(5), cursor.getString(6), cursor
+									.getLong(7), cursor.getInt(8)));
+					String s = cursor.getString(9);
+				}
+			}
+		}
 
-  }
+		if (!anyService) {
+			throw new LookupException("Calendar service could not be found");
+		}
 
-  public static String getCalendarKey(int sourceIdx, String idString) {
-    if (sourceIdx == 0) {
-      return "include_calendar_" + idString; // BACKWARDS COMPATIBILITY FOR 40,000+ USERS
-    } else {
-      return "include_calendar_" + idString + "_" + sourceIdx;
-    }
-  }
+		Collections.sort(events, new Comparator<ClientEvent>() {
+
+			public int compare(ClientEvent object1, ClientEvent object2) {
+				// "startDay ASC, startMinute ASC"
+				int compare = new Long(object1.getStartDay()).compareTo(object2
+						.getStartDay());
+				if (compare == 0) {
+					compare = new Integer(object1.getStartMinute())
+							.compareTo(object2.getStartMinute());
+				}
+				return compare;
+			}
+		});
+		return events;
+
+	}
+
+	static String getNiceDuration(TimeFormatter timeFormatter,
+			final long nowLocal, long beginUtc, final boolean allDayEvent,
+			final long endUtc, boolean in) {
+
+		if (allDayEvent) {
+			final long beginLocal = beginUtc; // Utc == local conceptually for
+												// all day events
+			final long endLocal = endUtc;
+			return timeFormatter.dailyRelativeStart(beginLocal, endLocal,
+					nowLocal);
+		} else {
+			final long beginLocal = TimeUtils.utcToLocal(beginUtc);
+			final long endLocal = TimeUtils.utcToLocal(endUtc);
+			return timeFormatter.relativeStart(beginLocal, endLocal, nowLocal,
+					in);
+		}
+	}
+
+	public static PendingIntent getPendingIntent(Context context,
+			String idxString, int requestCode) {
+		final Intent intent = new Intent(context, MainActivity.class);
+		intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK); // needed?
+		intent.putExtra("instanceId", idxString);
+		return PendingIntent.getActivity(context, requestCode, intent,
+				PendingIntent.FLAG_CANCEL_CURRENT
+		/* PendingIntent.FLAG_UPDATE_CURRENT */);
+
+	}
+
+	public static String getCalendarKey(int sourceIdx, String idString) {
+		if (sourceIdx == 0) {
+			return "include_calendar_" + idString; // BACKWARDS COMPATIBILITY
+													// FOR 40,000+ USERS
+		} else {
+			return "include_calendar_" + idString + "_" + sourceIdx;
+		}
+	}
 
 }
